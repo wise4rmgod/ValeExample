@@ -13,6 +13,12 @@ jobs:
         
       - name: Vale
         uses: errata-ai/vale-action@v2.0.0
+        with:
+        
+          files: vale-tutorial
+          # Optional
+          styles: |
+            https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip
 
         env:
           # Required, set by GitHub actions automatically:
