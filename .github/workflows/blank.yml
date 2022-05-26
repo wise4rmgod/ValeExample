@@ -1,26 +1,28 @@
-name: Vale Linter
+name: Docs-Linting
+
+# Controls when the action will run.
 on:
+  # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches:
-      - main
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
 jobs:
-  deploy:
+  prose:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        
-      - name: Vale
-        uses: errata-ai/vale-action@v2.0.0
-        with:
-        
-          files: 
-              vale-tutorial/
-          # Optional
-          styles: |
-            https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip
+    - name: Checkout
+      uses: actions/checkout@master
 
-        env:
-          # Required, set by GitHub actions automatically:
-          # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#about-the-github_token-secret
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - name: Vale
+      uses: errata-ai/vale-action@v1.4.2
+      with:
+        debug: true
+        styles: |
+          https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
+          https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip
+
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
