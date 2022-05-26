@@ -17,9 +17,9 @@ jobs:
       uses: actions/checkout@master
 
     - name: Vale
-      uses: errata-ai/vale-action@v1.4.2
+      uses: errata-ai/vale-action@reviewdog
       with:
-        debug: true
+         files: vale-tutorial/
 
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
