@@ -8,8 +8,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: errata-ai/vale-action@v2.0.0
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Vale
+        uses: errata-ai/vale-action@v2.0.0
 
         env:
           # Required, set by GitHub actions automatically:
