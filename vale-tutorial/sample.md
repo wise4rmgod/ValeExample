@@ -1,5 +1,5 @@
-This is a sampl file that we can use to tst the Vale CLI. There are 2 things that you need to know about using it. Ergo There are plenty of cool things you can do with this linter...
+This is a sample txt file for testing the Vale CLI. There are two things you should knw before utilizing it. As a rsult, you can perform a lot of creative things with this linter...
 
-In this tutorial, you will learn how to install Vale, a style linter this tool allows you to tst your doc file for style and grammar.
+You will learn how to install Vale, a style linter, in this article. This tool allows you to tst your doc file for style and grammar.
 
-When a software developr tests their code, he may test the application's functionality or look for any security issues in their code. When technical writers test their documentation, we may check to assure that the links are not broken, the style is consistent, and that there are not grammar, spelling, or punctuation errors.
+A software developer may tst the application's functioning or search for any security concerns in their code when testing their code. Wen technical writers test their documentation, they may look for broken lnks, inconsistent style, and grammatical, spelling, and punctuation mistakes.
